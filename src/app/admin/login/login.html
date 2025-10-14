@@ -1,0 +1,94 @@
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 items-center">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm text-center">
+    <img src="/logo.png" alt="Your Company" class="mx-auto h-20 w-auto" />
+    <h2 class="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
+      Welcome Tarun Gupta!
+    </h2>
+    @if(isOTPSent == true) {
+    <p class="text-[15px] text-slate-500">
+      Enter the 4-digit verification code that was sent to your Email-ID.
+    </p>
+    }
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form class="space-y-6">
+      @if (isOTPSent == false) {
+      <div class="email-enter">
+        <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
+        <div class="mt-2">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            class="block border border-black w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-black sm:text-sm/6"
+          />
+        </div>
+      </div>
+      } @else {
+      <div class="otp-enter">
+        <label for="email" class="block text-sm/6 font-medium text-gray-900 mb-2">Enter OTP</label>
+        <div class="flex items-center justify-center gap-5">
+          <input
+            type="text"
+            class="w-12 h-4 border border-black text-center text-lg font-extrabold text-slate-900 bg-gray-50 border hover:border-slate-200 rounded p-4 focus:bg-white focus:border-gray-800 focus:ring-2 focus:ring-gray-800"
+            pattern="\d*"
+            maxlength="1"
+          />
+          <input
+            type="text"
+            class="w-12 h-4 border border-black text-center text-lg font-extrabold text-slate-900 bg-gray-50 border hover:border-slate-200 rounded p-4 focus:bg-white focus:border-gray-800 focus:ring-2 focus:ring-gray-800"
+            maxlength="1"
+          />
+          <input
+            type="text"
+            class="w-12 h-4 border border-black text-center text-lg font-extrabold text-slate-900 bg-gray-50 border hover:border-slate-200 rounded p-4 focus:bg-white focus:border-gray-800 focus:ring-2 focus:ring-gray-800"
+            maxlength="1"
+          />
+          <input
+            type="text"
+            class="w-12 h-4 border border-black text-center text-lg font-extrabold text-slate-900 bg-gray-50 border hover:border-slate-200 rounded p-4 focus:bg-white focus:border-gray-800 focus:ring-2 focus:ring-gray-800"
+            maxlength="1"
+          />
+          <input
+            type="text"
+            class="w-12 h-4 border border-black text-center text-lg font-extrabold text-slate-900 bg-gray-50 border hover:border-slate-200 rounded p-4 focus:bg-white focus:border-gray-800 focus:ring-2 focus:ring-gray-800"
+            maxlength="1"
+          />
+          <input
+            type="text"
+            class="w-12 h-4 border border-black text-center text-lg font-extrabold text-slate-900 bg-gray-50 border hover:border-slate-200 rounded p-4 focus:bg-white focus:border-gray-800 focus:ring-2 focus:ring-gray-800"
+            maxlength="1"
+          />
+        </div>
+      </div>
+      }
+
+      <div>
+        @if (isOTPSent == true) {
+        <button
+          type="button"
+          class="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-800"
+          (click)="sendOTP()"
+        >
+          Verify OTP
+        </button>
+        <div class="text-sm text-dark mt-4 text-center">
+          Didn't receive code?
+          <a class="font-medium text-indigo-500 hover:text-indigo-600" href="#0">Resend</a>
+        </div>
+        } @else {
+        <button
+          type="button"
+          class="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-800"
+          (click)="sendOTP()"
+        >
+          Send OTP
+        </button>
+        }
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<header class="flex items-center justify-between mb-8">
+  <div class="w-14 h-14">
+    <img src="/logo.png" alt="logo" />
+  </div>
+  <div>
+    <ul class="flex">
+      <li
+        class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a
+          [routerLink]="''"
+          [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ><span class="mr-[2px]">/</span>index</a
+        >
+      </li>
+      <li
+        class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a
+          [routerLink]="'/experience'"
+          [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+          >experience</a
+        >
+      </li>
+      <li
+        class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a [routerLink]="'/post'" [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+          >posts</a
+        >
+      </li>
+      <li
+        class="tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a [routerLink]="" [routerLinkActive]="''">resume</a>
+      </li>
+    </ul>
+  </div>
+</header>
