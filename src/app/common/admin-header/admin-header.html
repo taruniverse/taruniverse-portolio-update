@@ -1,0 +1,50 @@
+<header class="flex items-center justify-between mb-8">
+  <div class="w-14 h-14">
+    <img src="/logo.png" alt="logo" />
+  </div>
+  <div>
+    <ul class="flex">
+      <li
+        class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a
+          [routerLink]="'/admin/dashboard'"
+          [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+          ><span class="mr-[2px]">/</span>dashboard</a
+        >
+      </li>
+      <li
+        class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a
+          [routerLink]="'/admin/experience'"
+          [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+          >experience</a
+        >
+      </li>
+      <li
+        class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a
+          [routerLink]="'/admin/certificates'"
+          [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+          >certificates</a
+        >
+      </li>
+      <li
+        [routerLink]="'/admin/post'"
+        [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+        class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a [routerLink]="" [routerLinkActive]="''">post</a>
+      </li>
+      <li
+        [routerLink]="'/admin/setting'"
+        [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
+        class="tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
+      >
+        <a [routerLink]="" [routerLinkActive]="''">settings</a>
+      </li>
+    </ul>
+  </div>
+</header>
