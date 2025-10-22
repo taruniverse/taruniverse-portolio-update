@@ -23,17 +23,17 @@
           >experience</a
         >
       </li>
-      <li
+      <!-- <li
         class="mr-6 tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
       >
         <a [routerLink]="'/post'" [routerLinkActive]="'text-gray-800 border-b border-gray-200'"
           >posts</a
         >
-      </li>
+      </li> -->
       <li
         class="tracking-wide text-gray-400 cursor-pointer transition-colors duration-300 hover:text-gray-800"
       >
-        <a [routerLink]="" [routerLinkActive]="''">resume</a>
+        <a (click)="downloadResume()">resume</a>
       </li>
     </ul>
   </div>
